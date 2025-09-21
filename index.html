@@ -8,6 +8,8 @@
   <meta property="og:title" content="Elifora Digitals — Websites & AI Chatbots" />
   <meta property="og:description" content="Websites that work. AI that converts. Phone-only sign-up." />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="https://postimg.cc/nskQzvp3" />
+  <link rel="apple-touch-icon" href="https://postimg.cc/nskQzvp3" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -40,16 +42,13 @@
       background:linear-gradient(90deg,var(--purple),var(--blue));
       color:#fff; font-size:.95rem; text-align:center; padding:10px 16px;
     }
+    .ribbon a{color:#fff; font-weight:700; text-decoration:none}
     header{
       position:sticky; top:0; z-index:40; background:#fff; box-shadow:0 1px 0 rgba(0,0,0,.06);
     }
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .logo{
-      width:36px;height:36px;border-radius:10px;
-      background:conic-gradient(from 180deg,var(--blue),var(--purple),var(--blue));
-      box-shadow:inset 0 0 20px rgba(255,255,255,.4),0 6px 18px rgba(65,70,200,.25);
-    }
+    .logo-img{width:36px; height:36px; border-radius:10px; object-fit:cover; box-shadow:0 6px 18px rgba(65,70,200,.25)}
     .brand-name{
       font-family:Poppins, Inter, sans-serif; font-weight:700; font-size:1.15rem; color:var(--dark);
       letter-spacing:.2px;
@@ -59,8 +58,7 @@
     }
     nav a:hover{color:var(--blue)}
     .actions{display:flex; gap:10px; align-items:center}
-    .btn{appearance:none; border:0; border-radius:10px; padding:12px 16px; font-weight:600; cursor:pointer}
-    .btn-ghost{background:transparent; color:var(--blue)}
+    .btn{appearance:none; border:0; border-radius:10px; padding:12px 16px; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block}
     .btn-primary{background:var(--green); color:#fff; box-shadow:0 8px 20px rgba(18,184,134,.25)}
     .btn-primary:hover{filter:brightness(0.98)}
     .btn-outline{background:#fff; color:var(--dark); border:1px solid #e9eaf0}
@@ -112,71 +110,28 @@
     .popular .badge{background:rgba(121,80,242,.12); color:#5a35e6}
     .card .muted{color:#656c7a; font-size:.95rem}
     .card .cta{margin-top:14px}
-    /* AI */
-    .ai-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:center}
-    .ai-demo{
-      border:1px dashed #d9dced; border-radius:var(--radius); padding:var(--pad); background:#fff;
-    }
-    .ai-bullets{display:grid; gap:10px}
-    .ai-bullets .chip{background:#e9fff7; color:#0f7e60}
     /* Work */
     .work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
     .work-item{border:1px solid #eef0f6; border-radius:var(--radius); overflow:hidden; background:#fff}
     .work-thumb{height:150px; background:linear-gradient(135deg,#e9edff,#f7f7ff)}
     .work-meta{padding:14px; font-weight:600}
     /* Contact */
-    .contact{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .contact{display:grid; grid-template-columns:1fr; gap:18px}
     .panel{
       background:#fff; border:1px solid #eef0f6; border-radius:var(--radius); padding:var(--pad); box-shadow:var(--shadow)
     }
-    label{display:block; font-weight:600; margin:8px 0 6px}
-    input, textarea, select{
-      width:100%; padding:12px 12px; border:1px solid #dfe3ee; border-radius:10px; font:inherit; background:#fff
-    }
-    textarea{min-height:120px; resize:vertical}
-    .help{font-size:.9rem; color:#656c7a}
     /* Footer */
     footer{background:#0f1322; color:#cfd6ff}
     .footer-grid{display:grid; grid-template-columns:2fr repeat(3,1fr); gap:18px; padding:40px 0}
     footer a{color:#d7ddff; text-decoration:none}
     footer a:hover{text-decoration:underline}
     .tiny{font-size:.85rem; color:#9aa2c6}
-    /* Modal (Call Panel) */
-    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(11,13,22,.6); z-index:100}
-    .modal[aria-hidden="false"]{display:flex}
-    .modal-card{max-width:720px; width:92%; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.35)}
-    .modal-head{padding:16px 18px; background:linear-gradient(90deg,var(--purple),var(--blue)); color:#fff; display:flex; align-items:center; justify-content:space-between}
-    .modal-body{padding:18px; display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    .close{background:transparent; border:0; color:#fff; font-size:1.4rem; cursor:pointer}
-    /* Chatbot widget */
-    .chat-fab{
-      position:fixed; right:18px; bottom:18px; width:56px; height:56px; border-radius:50%;
-      background:conic-gradient(from 180deg, var(--purple), var(--blue));
-      box-shadow:0 10px 30px rgba(65,70,200,.35);
-      display:grid; place-items:center; color:#fff; cursor:pointer; z-index:60;
-    }
-    .chat-fab:hover{transform:translateY(-2px)}
-    .chat{
-      position:fixed; right:18px; bottom:86px; width:min(380px,92%); background:#fff; border:1px solid #eef0f6; border-radius:16px;
-      box-shadow:0 20px 50px rgba(0,0,0,.18); display:none; flex-direction:column; overflow:hidden; z-index:60;
-    }
-    .chat.visible{display:flex}
-    .chat-head{padding:12px 14px; background:linear-gradient(90deg,var(--purple),var(--blue)); color:#fff; display:flex; align-items:center; justify-content:space-between}
-    .chat-body{padding:12px; max-height:360px; overflow:auto; display:flex; flex-direction:column; gap:8px; background:#fafbff}
-    .bubble{max-width:80%; padding:10px 12px; border-radius:14px}
-    .bot{background:#eef2ff; color:#1c2447; border:1px solid #dee2ff; align-self:flex-start}
-    .user{background:#e9fff7; color:#0f3a2f; border:1px solid #c9f5e7; align-self:flex-end}
-    .chat-input{display:flex; gap:8px; padding:10px; border-top:1px solid #eef0f6; background:#fff}
-    .chat-input input{flex:1}
     /* Responsive */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
       .features{grid-template-columns:1fr 1fr}
       .pricing-grid{grid-template-columns:1fr}
-      .ai-grid{grid-template-columns:1fr}
       .work-grid{grid-template-columns:1fr 1fr}
-      .contact{grid-template-columns:1fr}
-      .modal-body{grid-template-columns:1fr}
       nav{display:none}
     }
     @media (max-width: 640px){
@@ -190,26 +145,25 @@
 </head>
 <body>
   <div class="ribbon" role="note">
-    Sign-up by phone — <strong>no online checkout</strong>. We confirm details on a quick call.
+    Call <a href="tel:+447818341443">07818 341 443</a> or email <a href="mailto:eliforadigital@outlook.com">eliforadigital@outlook.com</a> — no online checkout.
   </div>
 
   <header aria-label="Main Header">
     <div class="container nav">
       <a class="brand" href="#top">
-        <div aria-hidden="true" class="logo"></div>
+        <img class="logo-img" src="https://postimg.cc/nskQzvp3" alt="Elifora Digitals logo" />
         <span class="brand-name">Elifora Digitals</span>
       </a>
       <nav aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#ai">AI Chatbot</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="actions">
-        <button class="btn btn-ghost" onclick="scrollToEl('#pricing')">See Pricing</button>
-        <button class="btn btn-primary" onclick="openCallPanel()">Book a Call</button>
+        <a class="btn btn-primary" href="tel:+447818341443">Call 07818 341 443</a>
+        <a class="btn btn-outline" href="mailto:eliforadigital@outlook.com">Email us</a>
       </div>
     </div>
   </header>
@@ -226,8 +180,8 @@
             Phone-first onboarding. Cancel anytime.
           </p>
           <div class="hero-cta">
-            <button class="btn btn-primary" onclick="openCallPanel()">Book a Call</button>
-            <button class="btn btn-outline" onclick="scrollToEl('#ai')">Try the Chatbot Demo</button>
+            <a class="btn btn-primary" href="tel:+447818341443">Call 07818 341 443</a>
+            <a class="btn btn-outline" href="mailto:eliforadigital@outlook.com">Email us</a>
           </div>
           <div class="highlights" aria-label="Highlights">
             <div class="pill"><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Custom Domain</div>
@@ -251,7 +205,7 @@
           <ul class="list">
             <li>1–3 pages (Starter), up to 5 (Growth), up to 12 + blog (Elite)</li>
             <li>On-page SEO (titles, meta, sitemap)</li>
-            <li>Contact forms & lead alerts</li>
+            <li>Contact details + call/email CTAs</li>
           </ul>
         </div>
         <div class="card">
@@ -288,11 +242,10 @@
             <li>Custom domain (e.g., yourbrand.co.uk)</li>
             <li>1–3 page website</li>
             <li>Mobile-responsive design</li>
-            <li>Contact form + email alerts</li>
             <li>Basic on-page SEO</li>
             <li>SSL + hosting included</li>
           </ul>
-          <div class="cta"><button class="btn btn-primary" onclick="openCallPanel('Starter')">Call to Subscribe</button></div>
+          <div class="cta"><a class="btn btn-primary" href="tel:+447818341443">Call to Subscribe</a></div>
         </article>
 
         <article class="card popular" aria-label="Growth Plan">
@@ -306,7 +259,7 @@
             <li>Basic analytics</li>
             <li>Quarterly content update (1 round)</li>
           </ul>
-          <div class="cta"><button class="btn btn-primary" onclick="openCallPanel('Growth')">Call to Subscribe</button></div>
+          <div class="cta"><a class="btn btn-primary" href="tel:+447818341443">Call to Subscribe</a></div>
         </article>
 
         <article class="card" aria-label="Elite Plan">
@@ -322,32 +275,8 @@
             <li>Monthly updates (up to 2 hours)</li>
             <li>Analytics dashboard & insights</li>
           </ul>
-          <div class="cta"><button class="btn btn-primary" onclick="openCallPanel('Elite')">Speak to a Specialist</button></div>
+          <div class="cta"><a class="btn btn-primary" href="tel:+447818341443">Speak to a Specialist</a></div>
         </article>
-      </div>
-    </section>
-
-    <!-- AI Chatbot -->
-    <section id="ai" class="container" aria-labelledby="ai-title">
-      <h2 id="ai-title" class="section-title">AI Website Chatbot</h2>
-      <p class="section-sub">Answer FAQs, capture leads, and book callbacks—your 24/7 assistant.</p>
-      <div class="ai-grid">
-        <div class="ai-bullets">
-          <div class="chip">Answers pricing & plan questions</div>
-          <div class="chip">Captures name, email & phone</div>
-          <div class="chip">Escalates to a human when needed</div>
-          <div class="chip">Learns from your content & FAQs</div>
-          <p class="help">Try the demo: open the chat bubble at the bottom-right.</p>
-        </div>
-        <div class="ai-demo">
-          <h3 style="margin:0 0 6px;">What it can say</h3>
-          <p class="help">This is a lightweight demo. The production bot is customized per client.</p>
-          <ul class="list">
-            <li>“We offer Starter (£10), Growth (£20), and Elite (£200) plans.”</li>
-            <li>“Want a free call? Share your number and a good time.”</li>
-            <li>“We onboard by phone—no online payments.”</li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -396,39 +325,16 @@
       <h2 id="contact-title" class="section-title">Contact</h2>
       <div class="contact">
         <div class="panel">
-          <h3 style="margin-top:0">Call Us</h3>
-          <p><strong>Phone:</strong> <a href="tel:+441234567890">+44 1234 567 890</a></p>
+          <h3 style="margin-top:0">Talk to Us</h3>
+          <p><strong>Phone:</strong> <a href="tel:+447818341443">07818 341 443</a></p>
+          <p><strong>Email:</strong> <a href="mailto:eliforadigital@outlook.com">eliforadigital@outlook.com</a></p>
           <p><strong>Hours:</strong> Mon–Fri, 9:00–17:00 (UK)</p>
           <p class="help">Payment is arranged over the phone or bank transfer after your onboarding call. No online checkout.</p>
           <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <button class="btn btn-primary" onclick="openCallPanel()">Book a Call</button>
-            <button class="btn btn-outline" onclick="openCallPanel()">Request a Callback</button>
+            <a class="btn btn-primary" href="tel:+447818341443">Call Now</a>
+            <a class="btn btn-outline" href="mailto:eliforadigital@outlook.com">Email Us</a>
           </div>
         </div>
-        <form class="panel" id="callback-form" onsubmit="submitCallback(event)" aria-label="Request a callback form">
-          <h3 style="margin-top:0">Request a Callback</h3>
-          <label for="f-name">Your Name</label>
-          <input id="f-name" name="name" required placeholder="Jane Smith" />
-          <label for="f-company">Company</label>
-          <input id="f-company" name="company" placeholder="Your Company Ltd." />
-          <label for="f-phone">Phone</label>
-          <input id="f-phone" name="phone" type="tel" inputmode="tel" required placeholder="+44 ..." />
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" placeholder="you@company.co.uk" />
-          <label for="f-time">Preferred Time</label>
-          <select id="f-time" name="time">
-            <option value="">No preference</option>
-            <option>Morning</option><option>Afternoon</option><option>Evening</option>
-          </select>
-          <label for="f-msg">Anything else?</label>
-          <textarea id="f-msg" name="message" placeholder="Tell us about your project..."></textarea>
-          <div style="display:flex; align-items:center; gap:8px; margin:10px 0">
-            <input id="f-consent" type="checkbox" required />
-            <label for="f-consent" style="margin:0">I agree to be contacted about my enquiry (GDPR).</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Request Callback</button>
-          <p class="help" id="callback-status" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -438,7 +344,7 @@
     <div class="container footer-grid">
       <div>
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px">
-          <div aria-hidden="true" class="logo"></div>
+          <img class="logo-img" src="https://postimg.cc/nskQzvp3" alt="Elifora Digitals logo small" />
           <strong>Elifora Digitals</strong>
         </div>
         <p class="tiny">Sign-up by phone — no online checkout. Month-to-month subscriptions. Cancel anytime.</p>
@@ -455,7 +361,6 @@
         <strong>Services</strong>
         <ul class="list">
           <li><a href="#services">Website Setup</a></li>
-          <li><a href="#ai">AI Chatbot</a></li>
           <li><a href="#pricing">Pricing</a></li>
         </ul>
       </div>
@@ -473,192 +378,20 @@
     </div>
   </footer>
 
-  <!-- Call Panel Modal -->
-  <div class="modal" id="call-modal" aria-hidden="true" role="dialog" aria-labelledby="call-title" aria-modal="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3 id="call-title" style="margin:0">Book a Call</h3>
-        <button class="close" aria-label="Close" onclick="closeCallPanel()">×</button>
-      </div>
-      <div class="modal-body">
-        <div>
-          <p><strong>Call us:</strong> <a href="tel:+441234567890" style="color:#fff;text-decoration:underline">+44 1234 567 890</a></p>
-          <p><strong>Hours:</strong> Mon–Fri, 9:00–17:00 (UK)</p>
-          <p>Choose a plan (optional) and we’ll confirm details on a quick call. <em>No online payment.</em></p>
-          <div id="selected-plan" class="chip" style="display:none"></div>
-        </div>
-        <form onsubmit="submitModalCallback(event)">
-          <label for="m-name">Name</label>
-          <input id="m-name" required placeholder="Jane Smith">
-          <label for="m-phone">Phone</label>
-          <input id="m-phone" type="tel" required placeholder="+44 ...">
-          <label for="m-email">Email</label>
-          <input id="m-email" type="email" placeholder="you@company.co.uk">
-          <label for="m-best">Best time</label>
-          <select id="m-best"><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
-          <div style="display:flex; align-items:center; gap:8px; margin:10px 0">
-            <input id="m-consent" type="checkbox" required>
-            <label for="m-consent" style="margin:0">I agree to be contacted (GDPR).</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Request Callback</button>
-          <p class="help" id="modal-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Chatbot Widget -->
-  <button class="chat-fab" id="chat-fab" aria-label="Open chat" onclick="toggleChat()">
-    <!-- chat icon -->
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M21 12a8 8 0 1 1-3.1-6.3L21 5l-.9 3.2A7.96 7.96 0 0 1 21 12Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-      <circle cx="9" cy="12" r="1.2" fill="white"/><circle cx="13" cy="12" r="1.2" fill="white"/><circle cx="17" cy="12" r="1.2" fill="white"/>
-    </svg>
-  </button>
-  <div class="chat" id="chat" role="dialog" aria-labelledby="chat-title" aria-live="polite">
-    <div class="chat-head">
-      <strong id="chat-title">Elifora AI Assistant</strong>
-      <button class="close" aria-label="Close chat" onclick="toggleChat()">×</button>
-    </div>
-    <div class="chat-body" id="chat-body">
-      <div class="bubble bot">Hi! Ask me about plans, timelines, or what's included. Want a free call? Say “call me”.</div>
-    </div>
-    <form class="chat-input" onsubmit="chatSend(event)">
-      <label class="sr-only" for="chat-input">Message</label>
-      <input id="chat-input" autocomplete="off" placeholder="Type your message..." />
-      <button class="btn btn-primary" type="submit">Send</button>
-    </form>
-  </div>
-
   <script>
     // Helpers
     const $ = (sel, root=document) => root.querySelector(sel);
-    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
     const scrollToEl = (sel) => { const el = $(sel); if(!el) return; el.scrollIntoView({behavior:'smooth', block:'start'}); };
 
     // Footer year
     $('#year').textContent = new Date().getFullYear();
 
-    // Modal (Call Panel)
-    function openCallPanel(plan){
-      const modal = $('#call-modal');
-      modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow = 'hidden';
-      const tag = $('#selected-plan');
-      if(plan){
-        tag.style.display = 'inline-flex';
-        tag.textContent = `Selected plan: ${plan}`;
-      } else {
-        tag.style.display = 'none';
-        tag.textContent = '';
-      }
-      // focus first input for accessibility
-      setTimeout(()=>$('#m-name').focus(), 50);
-    }
-    function closeCallPanel(){
-      const modal = $('#call-modal');
-      modal.setAttribute('aria-hidden','true');
-      document.body.style.overflow = '';
-    }
-    // Click outside to close
-    $('#call-modal').addEventListener('click', (e) => {
-      if(e.target.id === 'call-modal') closeCallPanel();
-    });
-    // ESC to close
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape' && $('#call-modal').getAttribute('aria-hidden')==='false') closeCallPanel();
-      if(e.key === 'Escape' && $('#chat').classList.contains('visible')) toggleChat();
-    });
-
-    // Form handlers (demo only)
-    function fakeSend(data){
-      // In production, POST to your backend or form service
-      return new Promise(res => setTimeout(()=>res({ok:true}), 600));
-    }
-    async function submitCallback(e){
-      e.preventDefault();
-      const form = e.target;
-      const status = $('#callback-status');
-      status.textContent = 'Sending...';
-      const data = Object.fromEntries(new FormData(form).entries());
-      const resp = await fakeSend(data);
-      if(resp.ok){
-        status.textContent = 'Thanks! We’ll call you shortly.';
-        form.reset();
-      } else {
-        status.textContent = 'Something went wrong. Please call us directly.';
-      }
-    }
-    async function submitModalCallback(e){
-      e.preventDefault();
-      const status = $('#modal-status');
-      status.textContent = 'Sending...';
-      const data = {
-        name: $('#m-name').value,
-        phone: $('#m-phone').value,
-        email: $('#m-email').value,
-        best: $('#m-best').value,
-        plan: $('#selected-plan').textContent.replace('Selected plan: ','') || undefined,
-        consent: $('#m-consent').checked
-      };
-      const resp = await fakeSend(data);
-      status.textContent = resp.ok ? 'Thanks! We’ll call you shortly.' : 'Please try again or call us.';
-      if(resp.ok) setTimeout(closeCallPanel, 800);
-    }
-
-    // Simple Chatbot Demo (front-end only)
-    const chat = $('#chat');
-    const chatBody = $('#chat-body');
-    const chatInput = $('#chat-input');
-
-    function toggleChat(){
-      chat.classList.toggle('visible');
-      if(chat.classList.contains('visible')) setTimeout(()=>chatInput.focus(), 60);
-    }
-    function addBubble(text, who='bot'){
-      const b = document.createElement('div');
-      b.className = 'bubble ' + who;
-      b.textContent = text;
-      chatBody.appendChild(b);
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }
-    function replyTo(msg){
-      const m = msg.toLowerCase();
-      if(m.includes('price') || m.includes('plan') || m.includes('cost')){
-        return 'We offer Starter (£10/mo), Growth (£20/mo with AI chatbot), and Elite (£200/mo premium). Sign-up is by phone only.';
-      }
-      if(m.includes('ai') || m.includes('chat')){
-        return 'Our AI chatbot answers FAQs, captures leads, and can schedule callbacks. It’s included in Growth and Elite.';
-      }
-      if(m.includes('call') || m.includes('phone') || m.includes('signup') || m.includes('sign-up')){
-        return 'Sure—tap “Book a Call” or say “call me: +44 ...” and a time. We’ll arrange everything by phone (no online checkout).';
-      }
-      if(m.includes('timeline') || m.includes('how long') || m.includes('launch')){
-        return 'Starter sites typically launch in 3–7 days after our kickoff call. Growth/Elite may take longer depending on content.';
-      }
-      // Capture simple lead: "call me: +44 ..."
-      const match = msg.match(/call me[:\s]*([+\d][\d\s\-()]+)/i);
-      if(match){
-        fakeSend({lead_phone: match[1].trim(), source:'chat'}); // demo only
-        return `Got it! We’ll call ${match[1].trim()} shortly. Prefer morning, afternoon, or evening?`;
-      }
-      return 'Happy to help! Ask about pricing, AI, timelines—or leave your number and preferred time for a free call.';
-    }
-    function chatSend(e){
-      e.preventDefault();
-      const text = chatInput.value.trim();
-      if(!text) return;
-      addBubble(text, 'user');
-      chatInput.value = '';
-      setTimeout(()=>addBubble(replyTo(text), 'bot'), 350);
-    }
-
     // Inline policy popovers (placeholder)
     function openPolicy(which){
       const messages = {
-        privacy: 'Privacy: We collect contact details you provide (forms/chat) to respond to enquiries. Basic analytics are used to improve the site.',
+        privacy: 'Privacy: We collect contact details you provide by phone/email to respond to enquiries. Basic analytics are used to improve the site.',
         terms: 'Terms: Month-to-month plans. Cancel anytime. Onboarding and payment are handled by phone.',
-        cookies: 'Cookies: Basic analytics cookies; chatbot may store conversation logs up to 90 days.'
+        cookies: 'Cookies: Basic analytics only.'
       };
       alert(messages[which] || 'Policy coming soon.');
     }
